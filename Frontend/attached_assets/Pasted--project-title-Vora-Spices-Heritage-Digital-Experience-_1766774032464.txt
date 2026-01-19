@@ -1,0 +1,91 @@
+{
+  "project_title": "NexRise Spices - Heritage Digital Experience",
+  "stack": {
+    "framework": "Next.js 14 (App Router)",
+    "styling": "Tailwind CSS",
+    "ui_components": "Shadcn UI & Magic UI",
+    "animations": "GSAP (ScrollTrigger), Framer Motion",
+    "icons": "Lucide React"
+  },
+  "design_system": {
+    "typography": {
+      "headings": "Cormorant Garamond (High-contrast Serif, Elegant and Timeless)",
+      "body": "Instrument Sans (Clean, modern, high legibility)",
+      "accents": "Geist Mono (For technical specs like 'Origin: Kerala' or 'Batch: #001')",
+      "weight": "Light or Medium for headings, Regular for body"
+    },
+    "color_palette": {
+      "primary": "#1A1A1A (Deep Charcoal)",
+      "background": "#F9F7F2 (Bone/Parchment White)",
+      "accents": [
+        "#B87333 (Saffron Ochre)",
+        "#922B21 (Cinnabar Red)",
+        "#4A5D23 (Sage Green)",
+        "#D4AF37 (Metallic Gold)"
+      ],
+      "ui_mode": "Scroll-triggered thematic background shifts (e.g., transitions from Saffron to Chili Red)"
+    },
+    "ui_elements": {
+      "buttons": "Sharp rectangular borders (1px) with a magnetic hover effect",
+      "cards": "Editorial, magazine-style layouts with high-grain spice photography",
+      "spacing": "Ultra-wide margins, asymmetrical grid alignment to mimic luxury catalogs"
+    }
+  },
+  "site_structure": [
+    {
+      "section": "Hero",
+      "elements": [
+        "Minimal Sticky Navigation",
+        "Large Serif Typography: 'EST. 18XX / PURITY UNCOMPROMISED'",
+        "Floating 3D Spice Elements (Star Anise or Cinnamon Sticks)"
+      ],
+      "animation": "GSAP ScrollTrigger to zoom into the 3D spice element while the headline text undergoes a high-end 'Fade & Rise' transition."
+    },
+    {
+      "section": "The Heritage Marquee",
+      "elements": [
+        "Certification Row",
+        "Horizontal Client/Partner List"
+      ],
+      "feature": "Magic UI 'Marquee' featuring logos like 'Organic Certified' and 'Global GAP'. Use a sepia filter on logos for a cohesive look."
+    },
+    {
+      "section": "The Collection",
+      "elements": [
+        "Fan-style product pouches",
+        "Tasting notes on hover"
+      ],
+      "animation": "Framer Motion 'hover' to spread the spice pouches like a deck of cards. On click, expand to a full-screen sensory description."
+    },
+    {
+      "section": "The Journey (Sourcing to Table)",
+      "elements": [
+        "Horizontal scroll storytelling",
+        "Progressive ingredient reveal"
+      ],
+      "feature": "As the user scrolls horizontally, the background transitions through earthy spice tones. GSAP triggers text to 'reveal' as if being written on paper."
+    },
+    {
+      "section": "Global Footprint",
+      "elements": [
+        "Interactive Map",
+        "Region labels"
+      ],
+      "animation": "Custom cursor transforms into a 'view' magnifying glass when hovering over sourcing regions (e.g., India, Vietnam, Madagascar)."
+    }
+  ],
+  "technical_requirements": {
+    "animations": [
+      "Lenis Smooth Scrolling for a premium, weighted feel.",
+      "Character-by-character text reveal for a 'typewriter' effect on technical specs.",
+      "Magnetic 'Explore' buttons that follow the user's cursor.",
+      "Grainy overlay filter (CSS/SVG) to give the site a tactile, organic texture."
+    ],
+    "components": [
+      "Navigation that blurs the background on scroll.",
+      "Footer featuring 'NEXRISE' in massive, semi-transparent serif font overlapping the contact form.",
+      "Custom 'Seed' or 'Grain' cursor to replace the standard pointer."
+    ]
+  },
+  "prompt_instruction": "Generate a high-end editorial website for an artisanal spice brand. Pivot from 'Paper Tiger's' tech-vibe to a heritage-driven aesthetic using 'Cormorant Garamond' and 'Instrument Sans'. Focus on earthy palettes (Ochre, Cinnabar, Bone) and use GSAP to create smooth, slow-motion scroll transitions that feel like flipping through a luxury culinary magazine. Ensure high-resolution imagery has a subtle film grain effect."
+}
