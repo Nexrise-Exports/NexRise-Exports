@@ -15,6 +15,9 @@ const _poppins = Poppins({
 export const metadata: Metadata = {
   title: "NexRise Admin Dashboard",
   description: "NexRise Admin Dashboard",
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({

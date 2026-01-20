@@ -12,8 +12,87 @@ import { ChatbotButton } from "@/components/ChatbotButton";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "NexRise Spices - Heritage Spices & Blends",
-  description: "Crafted in silence. Delivered with care. Celebrated across the world.",
+  metadataBase: new URL("https://nexriseexports.com"),
+  title: {
+    default: "NexRise Exports | Premium Indian Spices & Heritage Blends",
+    template: "%s | NexRise Exports"
+  },
+  description: "NexRise Exports is a premier B2B wholesaler of authentic Indian spices. Sourced directly from farmers, our heritage blends bring the true essence of India to the global market.",
+  keywords: [
+    "NexRise Exports",
+    "Indian spices",
+    "spice exporters India",
+    "wholesale spices",
+    "premium spices",
+    "organic spices",
+    "B2B spice supplier",
+    "Varanasi spices",
+    "heritage spice blends",
+    "turmeric wholesale",
+    "red chilli exports",
+    "cardamom suppliers",
+    "cumin traders",
+    "authentic Indian flavors"
+  ],
+  authors: [{ name: "NexRise Exports" }],
+  creator: "NexRise Exports",
+  publisher: "NexRise Exports",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.png",
+  },
+  manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://nexriseexports.com",
+    siteName: "NexRise Exports",
+    title: "NexRise Exports | Premium Indian Spices & Heritage Blends",
+    description: "Discover the rich heritage of Indian spices with NexRise Exports. Premium quality, single-origin spices delivered globally.",
+    images: [
+      {
+        url: "/favicon.png", // Fallback to icon if no high-res OG image exists
+        width: 512,
+        height: 512,
+        alt: "NexRise Exports Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NexRise Exports | Premium Indian Spices & Heritage Blends",
+    description: "Premium Indian spices sourced directly from heritage farms. Delivered with care, celebrated worldwide.",
+    images: ["/favicon.png"],
+    creator: "@NexRiseExports",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  category: 'business',
+  verification: {
+    google: "verification_id", // Replace with actual ID when available
+  },
+};
+
+export const viewport = {
+  themeColor: "#1A1A1A",
+  colorScheme: "dark light",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -72,13 +151,13 @@ export default function RootLayout({
             ease="power3.out"
           />
           {children}
-          
+
           {/* Floating Action Button - appears on all pages */}
           <FloatingActionButton />
-          
+
           {/* Chatbot Button - appears on all pages */}
           <ChatbotButton />
-          
+
           {/* Enquiry Popup - appears on all pages after delay */}
           <EnquiryPopup delay={3} />
         </Providers>
