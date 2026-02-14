@@ -4,6 +4,7 @@ import React, { useLayoutEffect, useRef, useState, useEffect, useCallback } from
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 
 type CardNavLink = {
@@ -308,6 +309,18 @@ const CardNav: React.FC<CardNavProps> = ({
                 }
               }}
             >
+              <div className="relative h-12 w-12 shrink-0 md:h-[52px] md:w-[52px]">
+                <Image
+                  src={logo}
+                  alt={logoAlt}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 48px, 52px"
+                  priority
+                  quality={90}
+                  unoptimized={logo.startsWith('data:') || !logo.startsWith('/')}
+                />
+              </div>
               <span className="font-serif text-2xl font-bold tracking-tighter text-black">NexRise Exports</span>
             </Link>
           </div>

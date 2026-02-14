@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
 import { Timeline } from "@/components/ui/timeline";
@@ -15,7 +16,7 @@ const values = [
   },
   {
     title: "Heritage",
-    description: "A century of tradition meets modern standards of excellence."
+    description: "A firm of tradition meets modern standards of excellence."
   },
   {
     title: "Sustainability",
@@ -60,14 +61,26 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+          <div className="flex justify-center mb-8">
+            <div className="relative h-20 w-20 md:h-24 md:w-24 shrink-0">
+              <Image
+                src="/logo-nobg.png"
+                alt="NexRise Exports"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 80px, 96px"
+                quality={90}
+              />
+            </div>
+          </div>
           <p className="font-semibold text-xs uppercase tracking-widest text-accent mb-4">
             Our Story
           </p>
           <h1 className="font-serif text-6xl md:text-7xl leading-tight mb-8 text-primary-foreground">
-            A Century of <span className="italic text-accent">Heritage</span>
+            A Firm of <span className="italic text-accent">Heritage</span>
           </h1>
-            <p className="font-sans text-xl text-primary-foreground max-w-3xl mx-auto leading-relaxed">
-            Since 2026, NexRise Exports has been the custodian of flavor, tradition, and excellence. What started as a single family business in the spice markets of Unjha has grown into a global ambassador of authentic Indian spices.
+          <p className="font-sans text-xl text-primary-foreground max-w-3xl mx-auto leading-relaxed">
+            Since 2026, NexRise Exports has been the custodian of flavor, tradition, and excellence. What started as a single family business in the spice markets of Varanasi has grown into a global ambassador of authentic Indian spices.
           </p>
         </motion.div>
       </section>

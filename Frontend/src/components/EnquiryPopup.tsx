@@ -105,21 +105,8 @@ export function EnquiryPopup({ delay = 3 }: EnquiryPopupProps) {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-md bg-white border border-primary/10 shadow-2xl pointer-events-auto rounded-lg max-h-[80vh] md:max-h-[75vh] overflow-y-auto"
+              className="w-full max-w-md bg-white border border-primary/10 shadow-2xl pointer-events-auto rounded-lg max-h-[80vh] md:max-h-[75vh] overflow-y-auto relative"
             >
-            {/* Close Button */}
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                // Store dismissal in localStorage with timestamp (expires after 3 minutes)
-                const expiryTime = Date.now() + 3 * 60 * 1000; // 3 minutes
-                localStorage.setItem("enquiry-popup-shown", expiryTime.toString());
-              }}
-              className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center bg-primary/5 hover:bg-primary/10 rounded-full z-10"
-            >
-              <X className="w-4 h-4 text-accent" />
-            </button>
-
             {/* Content */}
             <div className="p-4 md:p-5">
               <div className="mb-3">
@@ -214,6 +201,19 @@ export function EnquiryPopup({ delay = 3 }: EnquiryPopupProps) {
                 </div>
               </form>
             </div>
+
+            {/* Close Button - after content so it stays on top */}
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                const expiryTime = Date.now() + 3 * 60 * 1000;
+                localStorage.setItem("enquiry-popup-shown", expiryTime.toString());
+              }}
+              className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center bg-primary/5 hover:bg-primary/10 rounded-full z-10"
+              aria-label="Close"
+            >
+              <X className="w-4 h-4 text-accent" />
+            </button>
           </motion.div>
           </div>
         </>

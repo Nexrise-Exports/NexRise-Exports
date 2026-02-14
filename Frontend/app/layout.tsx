@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.png",
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   manifest: "/manifest.json",
   openGraph: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description: "Discover the rich heritage of Indian spices with NexRise Exports. Premium quality, single-origin spices delivered globally.",
     images: [
       {
-        url: "/favicon.png", // Fallback to icon if no high-res OG image exists
+        url: "/favicon.ico", // Fallback to icon if no high-res OG image exists
         width: 512,
         height: 512,
         alt: "NexRise Exports Logo",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NexRise Exports | Premium Indian Spices & Heritage Blends",
     description: "Premium Indian spices sourced directly from heritage farms. Delivered with care, celebrated worldwide.",
-    images: ["/favicon.png"],
+    images: ["/favicon.ico"],
     creator: "@NexRiseExports",
   },
   robots: {
@@ -141,8 +141,8 @@ export default function RootLayout({
         <Providers>
           <SpiceLoader />
           <CardNav
-            logo="/nexrise-logo.svg"
-            logoAlt="NexRise Spices Logo"
+            logo="/logo-nobg.png"
+            logoAlt="NexRise Exports Logo"
             items={navItems}
             baseColor="white"
             menuColor="#1A1A1A"

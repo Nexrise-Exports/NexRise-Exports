@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "NexRise Admin Dashboard",
   description: "NexRise Admin Dashboard",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.ico",
   },
 }
 

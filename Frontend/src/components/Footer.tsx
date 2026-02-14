@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useCreateInquiry } from "@/hooks/use-products";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertInquirySchema } from "@/types";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Linkedin, Instagram } from "lucide-react";
 import { z } from "zod";
 import { Separator } from "@/components/ui/separator";
 export function Footer() {
@@ -227,7 +228,30 @@ export function Footer() {
                     +91 95658 51852
                   </a>
                 </li>
-
+                <li className="flex items-center gap-3 pt-2">
+                  <a
+                    href="https://www.linkedin.com/in/nexrise-exports-28527539b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors inline-flex items-center gap-1.5"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    LinkedIn
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <a
+                    href="https://www.instagram.com/nexriseexports8666?igsh=cnh4cmQ3ZXo1cmg2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors inline-flex items-center gap-1.5"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                    Instagram
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -249,7 +273,19 @@ export function Footer() {
 
           {/* Bottom Bar */}
           <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs font-mono  ">
-            <p className="text-4xl text-accent font-serif italic" >NexRise Exports</p>
+            <div className="flex items-center gap-3">
+              <div className="relative h-12 w-12 shrink-0 md:h-14 md:w-14">
+                <Image
+                  src="/logo-nobg.png"
+                  alt="NexRise Exports"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 48px, 56px"
+                  quality={90}
+                />
+              </div>
+              <p className="text-4xl text-accent font-serif italic">NexRise Exports</p>
+            </div>
             <p className="opacity-60 mt-5">© 2026 NexRise Exports. All rights reserved.</p>
           </div>
           <Separator className="w-full mt-5 mb-5" />
